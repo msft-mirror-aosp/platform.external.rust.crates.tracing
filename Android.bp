@@ -46,3 +46,26 @@ rust_library {
     product_available: true,
     vendor_available: true,
 }
+
+rust_library {
+    name: "libtracing_max_level_off",
+    // has rustc warnings
+    host_supported: true,
+    crate_name: "tracing",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.1.37",
+    srcs: ["src/lib.rs"],
+    edition: "2018",
+    features: ["max_level_off"],
+    rustlibs: [
+        "libcfg_if",
+        "libpin_project_lite",
+        "libtracing_core",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    product_available: true,
+    vendor_available: true,
+}

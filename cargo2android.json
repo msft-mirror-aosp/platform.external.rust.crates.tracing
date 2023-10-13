@@ -1,4 +1,12 @@
 {
   "run": true,
-  "device": true
+  "device": true,
+  "variants": [
+    {
+    },
+    {
+      "features": "max_level_off",
+      "suffix": "_max_level_off"
+    }
+  ]
 }
